@@ -3,7 +3,7 @@ package oop.game;
 
 import oop.characters.*;
 import oop.characters.Character;
-import util.Input;
+//import util.Input;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -11,19 +11,19 @@ import java.util.Scanner;
 public class GameRunner {
 
     public static void main(String[] args) {
-        String heroChoice = Input.getString("Welcome! Please select a hero(Warrior/Knight): ");
-
-        Attackable hero;
-
-        if (heroChoice.equalsIgnoreCase("warrior")) {
-            hero = new Warrior("Warrior");
-        } else if (heroChoice.equalsIgnoreCase("knight")) {
-            hero = new Knight("Knight");
-        }else {
-            hero = new Mage(2000, 150, "zappy boi aka Samuel Moore");
-        }
-
-        hero.attack();
+//        String heroChoice = Input.getString("Welcome! Please select a hero(Warrior/Knight): ");
+//
+//        Attackable hero;
+//
+//        if (heroChoice.equalsIgnoreCase("warrior")) {
+//            hero = new Warrior("Warrior");
+//        } else if (heroChoice.equalsIgnoreCase("knight")) {
+//            hero = new Knight("Knight");
+//        }else {
+//            hero = new Mage(2000, 150, 50, 400, 150,"zappy boi aka Samuel Moore");
+//        }
+//
+//        hero.attack();
 
     }
 

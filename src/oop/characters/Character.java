@@ -1,15 +1,20 @@
 package oop.characters;
 
-public abstract class Character implements Attackable {
+public abstract class Character implements Attackable, Defendable{
 
     //    PROPERTIES ALL CHARACTERS SHARE
     protected int hp;
     protected int attackDamage = 0;
-    protected int spAttackDamage = 20;
+    protected int defenseLevel = 0;
+    protected int spAttackDamage = 0;
+    protected int spDefenseLevel = 0;
 
-    public Character(int hp, int attackDamage) {
+    public Character(int hp, int attackDamage, int defenseLevel, int spAttackDamage, int spDefenseLevel) {
         this.hp = hp;
         this.attackDamage = attackDamage;
+        this.defenseLevel = defenseLevel;
+        this.spAttackDamage = spAttackDamage;
+        this.spDefenseLevel = spDefenseLevel;
     }
 
     public int getHp() {
@@ -37,4 +42,12 @@ public abstract class Character implements Attackable {
         }
     }
 
+    @Override
+    public void defense() {
+        if (attackDamage > defenseLevel){
+            System.out.println("Attacked for " + (attackDamage - defenseLevel) + " damage");
+        }else {
+            System.out.println("Attacked for 0 damage");
+        }
+    }
 }
